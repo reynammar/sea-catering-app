@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "@/styles/globals.css";
+import { Navbar } from "@/feature/ds/components/Navbar";
 
 const nunito = Nunito({
   variable: "--font-Nunito",
@@ -11,7 +12,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "SEA Catering",
-  description: "SEA",
+  description: "Healthy Meals, Anytime, Anywhere",
 };
 
 export default function RootLayout({
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.variable} font-nunito antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
