@@ -1,17 +1,20 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
+import { Button } from "./Button";
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Menu', href: '/menu' },
-  { name: 'Subscription', href: '/subscription' },
-  { name: 'Contact', href: '/contact' },
+  { name: "Home", href: "/" },
+  { name: "Menu", href: "/menu" },
+  { name: "Subscription", href: "/subscription" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
   const pathname = usePathname();
+  const { data: session, status } = useSession();
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -27,7 +30,9 @@ export const Navbar = () => {
                 <Link
                   href={link.href}
                   className={`font-semibold transition-colors ${
-                    isActive ? 'text-primary-600' : 'text-gray-600 hover:text-primary-600'
+                    isActive
+                      ? "text-primary-600"
+                      : "text-gray-600 hover:text-primary-600"
                   }`}
                 >
                   {link.name}
@@ -35,6 +40,18 @@ export const Navbar = () => {
               </li>
             );
           })}
+          {status === "authenticated" ? (
+            <>
+              <span className="font-semibold">{session.user?.name}</span>
+              <Button variant="outline" onClick={() => signOut()}>
+                Logout
+              </Button>
+            </>
+          ) : (
+            <Link href="/login">
+              <Button>Login</Button>
+            </Link>
+          )}
         </ul>
       </nav>
     </header>

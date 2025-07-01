@@ -69,7 +69,6 @@ export const SubscriptionForm = () => {
         )}`
       );
       console.log("Data tersimpan:", response.data);
-      // Reset form
       setFormData({
         name: "",
         phone: "",
@@ -94,7 +93,6 @@ export const SubscriptionForm = () => {
       <h2 className="text-3xl font-bold mb-6 text-center text-primary-800">
         Formulir Langganan
       </h2>
-      {/* Name & Phone */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
         <div>
           <label className="block text-gray-700 font-semibold mb-2">
@@ -123,7 +121,6 @@ export const SubscriptionForm = () => {
           />
         </div>
       </div>
-      {/* Plan Selection */}
       <div className="mb-4">
         <label className="block text-gray-700 font-semibold mb-2">
           Pilih Paket*
@@ -140,7 +137,6 @@ export const SubscriptionForm = () => {
           ))}
         </select>
       </div>
-      {/* Meal Types */}
       <div className="mb-4">
         <label className="block text-gray-700 font-semibold mb-2">
           Tipe Makanan* (Pilih min. 1)
@@ -166,7 +162,6 @@ export const SubscriptionForm = () => {
           ))}
         </div>
       </div>
-      {/* Delivery Days */}
       <div className="mb-4">
         <label className="block text-gray-700 font-semibold mb-2">
           Hari Pengiriman* (Pilih min. 1)
@@ -192,7 +187,6 @@ export const SubscriptionForm = () => {
           ))}
         </div>
       </div>
-      {/* Allergies */}
       <div className="mb-6">
         <label className="block text-gray-700 font-semibold mb-2">
           Alergi (Opsional)
@@ -207,7 +201,6 @@ export const SubscriptionForm = () => {
           placeholder="Contoh: Udang, kacang"
         />
       </div>
-      {/* Total Price & Submit */}
       <div className="bg-primary-100 p-4 rounded-md text-center mb-6">
         <p className="text-lg text-primary-800">Estimasi Biaya Bulanan:</p>
         <p className="text-3xl font-bold text-primary-900">

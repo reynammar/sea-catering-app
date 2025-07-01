@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/feature/ds/components/Navbar";
+import { Providers } from "./providers";
 
 const nunito = Nunito({
   variable: "--font-Nunito",
@@ -17,14 +18,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} font-nunito antialiased`}>
-        <Navbar />
-        {children}
+      <body>
+        <Providers>
+          {" "}
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

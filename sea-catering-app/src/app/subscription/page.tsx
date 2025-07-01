@@ -1,7 +1,9 @@
+import { SubscriptionForm } from '@/feature/ds/components/SubscriptionForm';
+
 export default function SubscriptionPage() {
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold text-center">Langganan</h1>
+    <main className="min-h-screen p-8 bg-gray-50">
+      <SubscriptionForm />
     </main>
   );
 }
