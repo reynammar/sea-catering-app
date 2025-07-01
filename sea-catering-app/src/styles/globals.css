@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  /* == FONT SETTINGS == */
+  --font-nunito-sans: "Nunito Sans", sans-serif;
+  --font-family-nunito-sans: "Nunito Sans", sans-serif;
+
+  /* == BASE COLORS == */
+  --color-white-default: #FFFFFF;
+  --color-black-default: #1A1A1A;
+
+  /* == PRIMARY COLORS (Green) == */
+  --color-primary-100: #F2F8ED;
+  --color-primary-200: #DDEECB;
+  --color-primary-300: #C7E3AA;
+  --color-primary-400: #B1D988;
+  --color-primary-500: #9FC87E;
+  --color-primary-600: #8AB567;
+  --color-primary-700: #75A250;
+  --color-primary-800: #608F39;
+  --color-primary-900: #4B7C22;
+
+  /* == SECONDARY COLORS (Yellow/Gold) == */
+  --color-secondary-100: #FFF9E6;
+  --color-secondary-200: #FFF0B3;
+  --color-secondary-300: #FFE680;
+  --color-secondary-400: #FFDC4D;
+  --color-secondary-500: #FFC107;
+  --color-secondary-600: #CCA700;
+  --color-secondary-700: #997D00;
+  --color-secondary-800: #665400;
+  --color-secondary-900: #332A00;
+
+  /* == NEUTRAL & TEXT COLORS == */
+  --color-text-dark: #3b3838;
+  --color-text-light: #6c757d;
+  --color-border-default: #dee2e6;
+
+  /* == BACKGROUND COLORS == */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8F9FA;
+  --color-bg-tertiary: #E9ECEF;
+
+  /* == TYPOGRAPHY SETTINGS == */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xs: 10px / 16px;
+  --font-size-sm: 12px / 16px;
+  --font-size-md: 14px / 20px;
+  --font-size-lg: 16px / 24px;
+  --font-size-xl: 18px / 28px;
+  --font-size-2xl: 20px / 28px;
+  --font-size-3xl: 24px / 32px;
+  --font-size-4xl: 30px / 36px;
+  --font-size-5xl: 36px / 40px;
+  --font-size-6xl: 48px / 48px;
+  --font-size-7xl: 60px / 60px;
+}
+
+/* == RESPONSIVE FONT SIZES == */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-sm: 14px / 20px;
+    --font-size-md: 16px / 24px;
+    --font-size-lg: 18px / 28px;
+    --font-size-xl: 20px / 28px;
+    --font-size-2xl: 24px / 32px;
+    --font-size-3xl: 30px / 36px;
+    --font-size-4xl: 36px / 40px;
+    --font-size-5xl: 48px / 48px;
+    --font-size-6xl: 60px / 60px;
+    --font-size-7xl: 72px / 72px;
+    --font-size-8xl: 96px / 96px;
+  }
+}
+
+/* == CUSTOM CONTAINER CLASS == */
+.mycontainer {
+  @apply container mx-auto px-4;
+}
