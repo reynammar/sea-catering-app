@@ -6,30 +6,30 @@
   --font-family-sans: var(--font-nunito-sans);
 
   /* == BASE COLORS == */
-  --color-white-default: #FFFFFF;
-  --color-black-default: #1A1A1A;
+  --color-white-default: #ffffff;
+  --color-black-default: #1a1a1a;
 
   /* == PRIMARY COLORS (Green) == */
-  --color-primary-100: #F2F8ED;
-  --color-primary-200: #DDEECB;
-  --color-primary-300: #C7E3AA;
-  --color-primary-400: #B1D988;
-  --color-primary-500: #9FC87E;
-  --color-primary-600: #8AB567;
-  --color-primary-700: #75A250;
-  --color-primary-800: #608F39;
-  --color-primary-900: #4B7C22;
+  --color-primary-100: #f2f8ed;
+  --color-primary-200: #ddeecb;
+  --color-primary-300: #c7e3aa;
+  --color-primary-400: #b1d988;
+  --color-primary-500: #9fc87e;
+  --color-primary-600: #8ab567;
+  --color-primary-700: #75a250;
+  --color-primary-800: #608f39;
+  --color-primary-900: #4b7c22;
 
   /* == SECONDARY COLORS (Yellow/Gold) == */
-  --color-secondary-100: #FFF9E6;
-  --color-secondary-200: #FFF0B3;
-  --color-secondary-300: #FFE680;
-  --color-secondary-400: #FFDC4D;
-  --color-secondary-500: #FFC107;
-  --color-secondary-600: #CCA700;
-  --color-secondary-700: #997D00;
+  --color-secondary-100: #fff9e6;
+  --color-secondary-200: #fff0b3;
+  --color-secondary-300: #ffe680;
+  --color-secondary-400: #ffdc4d;
+  --color-secondary-500: #ffc107;
+  --color-secondary-600: #cca700;
+  --color-secondary-700: #997d00;
   --color-secondary-800: #665400;
-  --color-secondary-900: #332A00;
+  --color-secondary-900: #332a00;
 
   /* == NEUTRAL & TEXT COLORS == */
   --color-text-dark: #3b3838;
@@ -37,9 +37,9 @@
   --color-border-default: #dee2e6;
 
   /* == BACKGROUND COLORS == */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F8F9FA;
-  --color-bg-tertiary: #E9ECEF;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-tertiary: #e9ecef;
 
   /* == TYPOGRAPHY SETTINGS == */
   --font-weight-regular: 400;
@@ -78,4 +78,14 @@
 
 .mycontainer {
   @apply container mx-auto;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
